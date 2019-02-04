@@ -1,6 +1,6 @@
-package org.neighborpi.androidmvvmsemi;
+package org.neighborpi.androidmvvmsemi.viewmodel;
 
-public interface BaseViewModel {
+public interface IBaseViewModel {
     void onCreate();
     void onResume();
     void onPause();

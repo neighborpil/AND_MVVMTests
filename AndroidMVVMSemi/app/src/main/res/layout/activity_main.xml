@@ -7,7 +7,7 @@
     <data>
         <variable
             name="model"
-            type="org.neighborpi.androidmvvmsemi.MainViewModel" />
+            type="org.neighborpi.androidmvvmsemi.viewmodel.MainViewModel" />
     </data>
 
     <LinearLayout
@@ -33,6 +33,16 @@
             android:onClick="@{model.currentTime2ClickListener}"
             android:text="current time2"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> model.callActivity(model.INPUT_ACTIVITY_ID)}"
+            android:text="Call Input Activity"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> model.callActivity(model.LISTVIEW_ACTIIVITY_ID)}"
+            android:text="Call ListView Actiivity"/>
     </LinearLayout>
 </layout>
 
