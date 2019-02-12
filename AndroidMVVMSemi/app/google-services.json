@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "937164839412",
+    "firebase_url": "https://harborworkmonitoringsystem.firebaseio.com",
+    "project_id": "harborworkmonitoringsystem",
+    "storage_bucket": "harborworkmonitoringsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937164839412:android:cf50496ce7cbfd1d",
+        "android_client_info": {
+          "package_name": "com.samwoo.harborworkmonitoringalarmsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937164839412-9ajf6lftrrfkdoap1d97ak90ai1mm0l5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.samwoo.harborworkmonitoringalarmsystem",
+            "certificate_hash": "6cd8c1cd3ef0d7cd46741bdb15c2ae802c13e380"
+          }
+        },
+        {
+          "client_id": "937164839412-mlvkjh5napbdcfc0npfrtri8864vuu52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMY1CByTvH4bgRT9PLHKkxzlugVblSzwU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937164839412-mlvkjh5napbdcfc0npfrtri8864vuu52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

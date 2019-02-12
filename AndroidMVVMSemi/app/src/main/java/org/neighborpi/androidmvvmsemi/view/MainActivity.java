@@ -1,12 +1,13 @@
 package org.neighborpi.androidmvvmsemi.view;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import org.neighborpi.androidmvvmsemi.ImageActivity;
 import org.neighborpi.androidmvvmsemi.viewmodel.ICallAnotherActivityNavigator;
 import org.neighborpi.androidmvvmsemi.viewmodel.IToast;
 import org.neighborpi.androidmvvmsemi.viewmodel.MainViewModel;
@@ -17,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements ICallAnotherActiv
 
     //private MainViewModel model = new MainViewModel(this, this);
     private MainViewModel model = new MainViewModel(this);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,13 @@ public class MainActivity extends AppCompatActivity implements ICallAnotherActiv
     public void callActivity(int activityId) {
         if(activityId == MainViewModel.INPUT_ACTIVITY_ID.get()){
             startActivity(new Intent(getApplicationContext(), InputActivity.class));
-        } else if(activityId == MainViewModel.LISTVIEW_ACTIIVITY_ID.get()){
-            startActivity(new Intent(getApplicationContext(), ListActivity.class));
         }
-        else{
+        else if(activityId == MainViewModel.LISTVIEW_ACTIIVITY_ID.get()){
+            startActivity(new Intent(getApplicationContext(), ListActivity.class));
+            //startActivity(new Intent(getApplicationContext(), ListActivity.class));
+        } else if (activityId == MainViewModel.IMAGE_ACTIVITY_ID.get()) {
+            startActivity(new Intent(getApplicationContext(), ImageActivity.class));
+        } else {
             model.errorToast();
         }
         /*switch (activityId) {
@@ -67,6 +70,15 @@ public class MainActivity extends AppCompatActivity implements ICallAnotherActiv
                 model.errorToast();
                 break;
         }*/
+    }
+
+    @Override
+    public void callFragment(int fragmentId) {
+        FragmentManager manager = getSupportFragmentManager();
+        if(fragmentId == MainViewModel.INPUT_FRAGMENT_ID.get()){
+            InputFragment fragment = new InputFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.container, fragment).commit();
+        }
     }
 
     @Override

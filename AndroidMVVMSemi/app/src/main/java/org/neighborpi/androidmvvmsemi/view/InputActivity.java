@@ -10,7 +10,7 @@ import org.neighborpi.androidmvvmsemi.viewmodel.InputViewModel;
 import org.neighborpi.androidmvvmsemi.R;
 import org.neighborpi.androidmvvmsemi.databinding.ActivityInputBinding;
 
-public class InputActivity extends AppCompatActivity implements IToast {
+public class  InputActivity extends AppCompatActivity implements IToast {
 
     private InputViewModel model = new InputViewModel(this);
 

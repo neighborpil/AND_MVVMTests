@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -25,24 +25,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{() -> model.showCurrentTime()}"
-            android:text="current time1"/>
+            android:text="current time1" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{model.currentTime2ClickListener}"
-            android:text="current time2"/>
+            android:text="current time2" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{() -> model.callActivity(model.INPUT_ACTIVITY_ID)}"
-            android:text="Call Input Activity"/>
+            android:text="Call Input Activity" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{() -> model.callActivity(model.LISTVIEW_ACTIIVITY_ID)}"
-            android:text="Call ListView Actiivity"/>
+            android:text="Call ListView Actiivity" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> model.callFragment(model.INPUT_FRAGMENT_ID)}"
+            android:text="Open Fragment" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> model.callActivity(model.IMAGE_ACTIVITY_ID)}"
+            android:text="open image activity"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 </layout>
 

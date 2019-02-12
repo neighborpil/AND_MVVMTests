@@ -1,6 +1,7 @@
 package org.neighborpi.androidmvvmsemi.viewmodel;
 
 import android.databinding.ObservableArrayList;
+import android.os.Debug;
 
 import org.neighborpi.androidmvvmsemi.viewmodel.IBaseViewModel;
 import org.neighborpi.androidmvvmsemi.viewmodel.UserViewModel;
@@ -12,7 +13,6 @@ public class UsersViewModel implements IBaseViewModel {
 
     @Override
     public void onCreate() {
-
     }
 
     @Override

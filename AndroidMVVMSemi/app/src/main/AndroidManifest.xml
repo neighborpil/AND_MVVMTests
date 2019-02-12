@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.InputActivity" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".view.ListActivity" />
+        <activity android:name=".view.FragmentTestActivity" />
+        <activity android:name=".ImageActivity"></activity>
     </application>
 
 </manifest>

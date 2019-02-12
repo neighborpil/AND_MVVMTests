@@ -16,6 +16,10 @@ public class InputViewModel implements IBaseViewModel {
     public final ObservableInt score = new ObservableInt();
     public final ObservableBoolean isValid = new ObservableBoolean();
 
+    public InputViewModel(){
+
+    }
+
     public InputViewModel(IToast toast){
         this.toast = toast;
     }
@@ -70,7 +74,9 @@ public class InputViewModel implements IBaseViewModel {
     };
 
     public void toast() {
-        String result = "Name:" + this.name.get() + ", Email: " + this.email.get() + ", Rating:" + this.score.get();
-        toast.toast(result);
+        if(this.toast != null){
+            String result = "Name:" + this.name.get() + ", Email: " + this.email.get() + ", Rating:" + this.score.get();
+            toast.toast(result);
+        }
     }
 }

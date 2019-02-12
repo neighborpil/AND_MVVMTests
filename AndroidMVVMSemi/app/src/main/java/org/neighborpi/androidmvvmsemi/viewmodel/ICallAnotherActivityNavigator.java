@@ -1,5 +1,6 @@
 package org.neighborpi.androidmvvmsemi.viewmodel;
 
 public interface ICallAnotherActivityNavigator {
-    void callActivity(int acitivityNumber);
+    void callActivity(int acitivityId);
+    void callFragment(int fragmentId);
 }

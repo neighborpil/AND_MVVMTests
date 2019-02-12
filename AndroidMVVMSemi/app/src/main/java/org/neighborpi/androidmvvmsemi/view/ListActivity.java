@@ -1,5 +1,4 @@
-package org.neighborpi.androidmvvmsemi;
-
+package org.neighborpi.androidmvvmsemi.view;
 import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableArrayList;
@@ -8,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import org.neighborpi.androidmvvmsemi.R;
 import org.neighborpi.androidmvvmsemi.databinding.ActivityListBinding;
 import org.neighborpi.androidmvvmsemi.viewmodel.UserListViewAdapter;
 import org.neighborpi.androidmvvmsemi.viewmodel.UserViewModel;
@@ -22,7 +22,7 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityListBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_list);
         binding.setModel(usersViewModel);
-
+        usersViewModel.onCreate();
         // 이렇게 해도 잘된단다
         // ViewDataBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_list);
         // binding.setVariable(BR.model, usersViewModel);

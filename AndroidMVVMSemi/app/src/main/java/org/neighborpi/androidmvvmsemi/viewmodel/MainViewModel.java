@@ -10,6 +10,8 @@ public class MainViewModel implements IBaseViewModel {
 
     public static final ObservableInt INPUT_ACTIVITY_ID = new ObservableInt(0);
     public static final ObservableInt LISTVIEW_ACTIIVITY_ID = new ObservableInt(1);
+    public static final ObservableInt INPUT_FRAGMENT_ID = new ObservableInt(2);
+    public static final ObservableInt IMAGE_ACTIVITY_ID = new ObservableInt(3);
 
     public final ObservableField<String> helloText = new ObservableField<>();
     private ICallAnotherActivityNavigator navigator;
@@ -60,7 +62,11 @@ public class MainViewModel implements IBaseViewModel {
         navigator.callActivity(activityId);
     }
 
+    public void callFragment(int fragmentId) {
+        navigator.callFragment(fragmentId);
+    }
     public void errorToast(){
         toast.toast("It's not valid activity id");
     }
+
 }
